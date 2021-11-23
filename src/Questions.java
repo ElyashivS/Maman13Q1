@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Questions {
 
-    private Map<String, ArrayList<String>> dictionary = new HashMap<>();
     private ArrayList<String> answers = new ArrayList<>();
     private ArrayList<String> correctAnswers = new ArrayList<>();
-    private String question;
+    private ArrayList<String> question = new ArrayList<>();
     private int lineNumber = 0;
+    private int numOfCorrectQues = 0;
 
     public Questions() {
         Scanner input;
@@ -19,13 +19,11 @@ public class Questions {
                 String s = input.nextLine();
 
                 if (lineNumber % 5 == 1) // Enter question to string
-                    question = s;
+                    question.add(s);
                 if (lineNumber % 5 != 1) // Enter ALL answers to ArrayList
                     answers.add(s);
                 if (lineNumber % 5 == 2) // Enter CORRECT answer to ArrayList
                     correctAnswers.add(s);
-
-                dictionary.put(question, answers);
             }
 
             for (int i = 0; i < answers.size(); i+=4) { // Shuffle all answer separately
@@ -38,7 +36,23 @@ public class Questions {
         }
     }
 
+    public ArrayList<String> getCorrectAnswers() {
+        return correctAnswers;
+    }
+
+    public ArrayList<String> getQuestion() {
+        return question;
+    }
+
     public ArrayList<String> getAnswers() {
         return answers;
+    }
+
+    public void setNumOfCorrectQues(int numOfCorrectQues) {
+        this.numOfCorrectQues = numOfCorrectQues;
+    }
+
+    public int getNumOfCorrectQues() {
+        return numOfCorrectQues;
     }
 }
