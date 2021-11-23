@@ -1,10 +1,25 @@
-What the fuck?
-YES
-NO
-MAYBE
-IDK
-Question 2?
-Correct answer
-Wrong1
-Wrong2
-Wrong3
+In which program language this program written?
+Java
+Python
+C#
+Go
+Who is better, Ronaldo or Messi?
+Ronaldo
+Messi
+Both are good
+The two of them sucks
+Who is the leader of Avenged Sevenfold?
+M. Shadow
+Synyster Gates
+The Rev
+Aviv Gefen
+How much time did I spend on this assignment?
+2 days
+1 day
+a week
+a month
+Who won in the NBA championship in 2014?
+San Antonio Spurs
+Miami Heat
+Toronto Raptors
+Golden State Warriors
