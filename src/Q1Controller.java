@@ -24,9 +24,9 @@ public class Q1Controller {
     @FXML
     public void initialize() {
         lbl.setText("What the fuck?");
-        btn1.setText(q.getAnswers().get(1));
-        btn2.setText(q.getAnswers().get(2));
-        btn3.setText(q.getAnswers().get(3));
-        btn4.setText(q.getAnswers().get(4));
+        btn1.setText(q.getAnswers().get(0));
+        btn2.setText(q.getAnswers().get(1));
+        btn3.setText(q.getAnswers().get(2));
+        btn4.setText(q.getAnswers().get(3));
     }
 }

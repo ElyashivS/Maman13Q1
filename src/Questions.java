@@ -5,8 +5,8 @@ import java.util.*;
 public class Questions {
 
     private Map<String, ArrayList<String>> dictionary = new HashMap<>();
-    private ArrayList<String> correctAnswers = new ArrayList<>();
     private ArrayList<String> answers = new ArrayList<>();
+    private ArrayList<String> correctAnswers = new ArrayList<>();
     private String question;
     private int lineNumber = 0;
 
@@ -17,7 +17,6 @@ public class Questions {
             while (input.hasNextLine()) {
                 lineNumber++;
                 String s = input.nextLine();
-                System.out.println(s); // REMOVE THIS
 
                 if (lineNumber % 5 == 1) // Enter question to string
                     question = s;
@@ -27,14 +26,12 @@ public class Questions {
                     correctAnswers.add(s);
 
                 dictionary.put(question, answers);
-
-
-            }
-            for (int i = 0; i < dictionary.size(); i++) {
-                Collections.shuffle((List<?>) dictionary.values());
             }
 
-            System.out.println(dictionary.get(question));
+            for (int i = 0; i < answers.size(); i+=4) { // Shuffle all answer separately
+                Collections.shuffle(answers.subList(i, i + 4));
+            }
+
             input.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
